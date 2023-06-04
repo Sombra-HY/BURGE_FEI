@@ -1,0 +1,8 @@
+{
+  "menu": {
+    "1": {"name": "X-burgue", "price": 23.50},
+    "2": {"name": "Coca-Cola 500ml", "price": 8.50},
+    "3": {"name": "Batata-Frita M", "price": 19.30},
+    "4": {"name": "Bolinho", "price": 5.60}
+  }
+  }
