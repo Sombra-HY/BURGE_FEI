@@ -2,26 +2,21 @@ import datetime
 from datetime import date
 
 
-class Order():
+class Order:
 
-    def __init__(self, name, cpf):
-        self.name = name
+    def setCPF(self, cpf):
         self.cpf = cpf
-        self.order = {
-            self.cpf : {"Pedidos":{}}
-        }
+        self.order = {self.cpf: {"Pedidos": {}}}
 
     def addOrder(self, idOrder, quantity, price, operationID):
-        self.order[self.cpf]["Pedidos"].update(
+        order = self.order[self.cpf]
 
-            {len(self.order[self.cpf]["Pedidos"]): {
+        order["Pedidos"].update({
+            len(order["Pedidos"]): {
                 "ID": idOrder,
                 "quantity": quantity,
                 "price": price,
-                "date": {
-                    "yy/mm/dd": date.today(),
-                    "hour": datetime.datetime.now()
-                },
+                "date": {"yy/mm/dd": date.today(), "hour": datetime.datetime.now()},
                 "operationID": operationID
             }})
 
